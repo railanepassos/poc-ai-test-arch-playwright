@@ -1,4 +1,4 @@
-# 💪 poc-arc-to-tests
+# 💪 poc-ai-test-arch-playwright
 
 Repositório de **prova de conceito** para avaliação e comparação de diferentes **padrões de automação de testes** aplicados a interfaces web, com foco na **geração assistida por IA** de cenários end-to-end.
 

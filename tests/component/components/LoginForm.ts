@@ -13,6 +13,6 @@ export class LoginForm {
   }
 
   async submit() {
-    await this.root.locator('button[type="submit"]').click();
+    await this.root.locator('#submit').click();
   }
 }

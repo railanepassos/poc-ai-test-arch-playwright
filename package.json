@@ -9,11 +9,13 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^22.14.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "node-fetch": "^3.3.2"
   }
 }

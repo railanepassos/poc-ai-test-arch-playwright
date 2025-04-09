@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { LoginForm } from '../componets/LoginForm';
+import { LoginForm } from '../components/LoginForm';
 
 export class LoginPage {
   private loginForm: LoginForm;

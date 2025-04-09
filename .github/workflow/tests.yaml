@@ -1,0 +1,36 @@
+name: CI - Playwright Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repositório
+        uses: actions/checkout@v3
+
+      - name: 🟢 Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🧪 Instalar Playwright
+        run: npx playwright install --with-deps
+
+      - name: 🧪 Rodar testes
+        run: npx playwright test
+
+      # Descomente se quiser incluir geração automática via IA local (precisa de infraestrutura)
+      # - name: 🤖 Gerar testes via logs (Ollama precisa estar disponível)
+      #   run: npx tsx tests/pom_component/generators/fromLogs.ts
+
+      - name: ✅ Finalizado
+        run: echo "Todos os testes executados com sucesso!"
